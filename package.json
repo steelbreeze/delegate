@@ -1,0 +1,27 @@
+{
+  "name": "@steelbreeze/delegate",
+  "version": "1.0.0",
+  "description": "Mutlicast delegate for TypeScript and JavaScript",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/steelbreeze/delegate.git"
+  },
+  "keywords": [
+    "delegate",
+    "multicast",
+	"TypeScript"
+  ],
+  "author": "David Mesquita-Morris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/steelbreeze/delegate/issues"
+  },
+  "homepage": "https://github.com/steelbreeze/delegate#readme"
+}
