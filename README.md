@@ -7,6 +7,8 @@ npm install @steelbreeze/delegate
 ```
 
 ## Usage
+### TypeScript
+
 ```typescript
 import { create as delegate } from "../delegate";
 
@@ -16,6 +18,7 @@ const b = delegate(param => console.log(param + " Hello world"));
 const c = delegate(a, b);
 
 a("1")
+a("2")
 c("3");
 ```
 
