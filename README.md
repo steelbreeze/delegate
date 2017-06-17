@@ -33,6 +33,15 @@ a("1");
 b("2");
 c("3");
 ```
-
+### Output
+The output of the above code will be:
+```shell
+1 Hello
+1 World
+2 Hello world
+3 Hello
+3 World
+3 Hello world
+```
 ## License
 MIT
