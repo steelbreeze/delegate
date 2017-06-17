@@ -24,8 +24,8 @@ c("3");
 ```javascript
 var delegate = require("@steelbreeze/delegate");
 
-var a = delegate.create(function (param) { return console.log(param + " Hello"); }, function (param) { return console.log(param + " World "); });
-var b = delegate.create(function (param) { return console.log(param + " Hello world"); });
+var a = delegate.create(function (param) { console.log(param + " Hello"); }, function (param) { console.log(param + " World "); });
+var b = delegate.create(function (param) { console.log(param + " Hello world"); });
 
 var c = delegate.create(a, b);
 
