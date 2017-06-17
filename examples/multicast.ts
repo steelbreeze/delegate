@@ -5,5 +5,6 @@ const b = delegate(param => console.log(param + " Hello world"));
 
 const c = delegate(a, b);
 
-a("1")
-c("3");
+a("a")
+b("b")
+c("c");
