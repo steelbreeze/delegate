@@ -9,7 +9,7 @@ npm install @steelbreeze/delegate
 ## Usage
 ### TypeScript
 ```typescript
-import { create as delegate } from "../delegate";
+import { create as delegate } from "@steelbreeze/delegate";
 
 const a = delegate(param => console.log(param + " Hello"), param => console.log(param + " World "));
 const b = delegate(param => console.log(param + " Hello world"));
@@ -22,7 +22,7 @@ c("c");
 ```
 ### JavaScript
 ```javascript
-var delegate = require("../delegate");
+var delegate = require("@steelbreeze/delegate");
 
 var a = delegate.create(function (param) { console.log(param + " Hello"); }, function (param) { console.log(param + " World "); });
 var b = delegate.create(function (param) { console.log(param + " Hello world"); });
