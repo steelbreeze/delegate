@@ -1,7 +1,6 @@
 # delegate
 Multicast delegate for TypeScript and JavaScript
 
-[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg)](git@github.com:steelbreeze/delegate.git)
 ## Install
 ```shell
 npm install @steelbreeze/delegate
@@ -9,7 +8,6 @@ npm install @steelbreeze/delegate
 
 ## Usage
 ### TypeScript
-
 ```typescript
 import { create as delegate } from "../delegate";
 
@@ -19,7 +17,20 @@ const b = delegate(param => console.log(param + " Hello world"));
 const c = delegate(a, b);
 
 a("1")
-a("2")
+b("2")
+c("3");
+```
+### JavaScript
+```javascript
+var delegate = require("../delegate");
+
+var a = delegate.create(function (param) { return console.log(param + " Hello"); }, function (param) { return console.log(param + " World "); });
+var b = delegate.create(function (param) { return console.log(param + " Hello world"); });
+
+var c = delegate.create(a, b);
+
+a("1");
+b("2");
 c("3");
 ```
 
