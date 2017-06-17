@@ -1,6 +1,7 @@
 # delegate
 Multicast delegate for TypeScript and JavaScript
 
+[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg)](git@github.com:steelbreeze/delegate.git)
 ## Install
 ```shell
 npm install @steelbreeze/delegate
