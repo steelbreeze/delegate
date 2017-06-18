@@ -1,8 +1,9 @@
 {
   "name": "@steelbreeze/delegate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Multicast delegate for TypeScript and JavaScript",
   "main": "delegate.js",
+  "typings": "delegate.d.ts",
   "directories": {
     "example": "examples",
     "test": "test"
