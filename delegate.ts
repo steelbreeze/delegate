@@ -32,7 +32,15 @@ export interface Delegate {
  * @return Returns true if the [delegate]{@link Delegate} contains callable behavior.
  */
 export function isCallable(delegate: Delegate): boolean {
-	return delegate !== noop && delegate !== undefined && delegate !== null;
+	return delegate !== undefined && delegate !== null;
+}
+
+/**
+ * Tests a [delegate]{@link Delegate} to see if it contains behavior. 
+ * @hidden
+ */
+function hasBehavior(delegate: Delegate): boolean {
+	return delegate !== noop && isCallable(delegate);
 }
 
 /**
@@ -42,7 +50,7 @@ export function isCallable(delegate: Delegate): boolean {
  */
 export function create(...delegates: Delegate[]): Delegate {
 	// filter non-callable entries from the passed parameters.
-	const callable = delegates.filter(isCallable);
+	const callable = delegates.filter(hasBehavior);
 
 	if (callable.length !== 0) {
 		// create a new delegate that calls all the passed delegates and returns their results as an array.

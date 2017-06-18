@@ -20,9 +20,16 @@ var noop = function () { };
  * @return Returns true if the [delegate]{@link Delegate} contains callable behavior.
  */
 function isCallable(delegate) {
-    return delegate !== noop && delegate !== undefined && delegate !== null;
+    return delegate !== undefined && delegate !== null;
 }
 exports.isCallable = isCallable;
+/**
+ * Tests a [delegate]{@link Delegate} to see if it contains behavior.
+ * @hidden
+ */
+function hasBehavior(delegate) {
+    return delegate !== noop && isCallable(delegate);
+}
 /**
  * Creates a [delegate]{@link Delegate} for one or more [delegates]{@link Delegate} (functions) that can be called as one.
  * @param delegates The set of [delegates]{@link Delegate} (functions) to aggregate into a single [delegate]{@link Delegate}.
@@ -34,7 +41,7 @@ function create() {
         delegates[_i] = arguments[_i];
     }
     // filter non-callable entries from the passed parameters.
-    var callable = delegates.filter(isCallable);
+    var callable = delegates.filter(hasBehavior);
     if (callable.length !== 0) {
         // create a new delegate that calls all the passed delegates and returns their results as an array.
         var delegate = function () {
