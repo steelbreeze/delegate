@@ -1,5 +1,5 @@
 # delegate
-Multicast delegate for TypeScript and JavaScript
+Multicast delegate for TypeScript and JavaScript.
 
 ## Install
 ```shell
