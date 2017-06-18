@@ -43,5 +43,19 @@ c Hello
 c World
 c Hello world
 ```
+## API
+### create
+Creates a new delegate from one or more functions or delegates, the result of which is callable and when called returns an array of all the return values from those functions or delegates.
+
+```typescript
+create(...delegates: Delegate[]): Delegate
+```
+### isCallable
+Tests a delegate to see if it is callable. A callable delegate is one that is not null, undefined or the result of a call to ```create``` without any arguments.
+
+```typescript
+isCallable(delegate: Delegate): boolean
+```
+
 ## License
 MIT
