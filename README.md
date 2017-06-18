@@ -43,5 +43,11 @@ c Hello
 c World
 c Hello world
 ```
+## API
+### Interfaces
+#### Delegate
+### Functions
+#### create
+#### isCallable
 ## License
 MIT
