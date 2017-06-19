@@ -1,6 +1,8 @@
 # delegate
 Multicast delegate for TypeScript and JavaScript.
 
+If you like delegate, please star it...
+
 ## Install
 ```shell
 npm install @steelbreeze/delegate
