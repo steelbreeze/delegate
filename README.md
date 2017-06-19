@@ -1,7 +1,7 @@
 # delegate
 Multicast delegate for TypeScript and JavaScript.
 
-[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/steelbreeze/delegate)[![npm](https://img.shields.io/npm/dw/localeval.svg)](https://www.npmjs.com/package/@steelbreeze/delegate)
+(https://img.shields.io/npm/dw/localeval.svg)](https://www.npmjs.com/package/@steelbreeze/delegate)
 
 If you like delegate, please star it...
 
