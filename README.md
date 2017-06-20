@@ -1,7 +1,8 @@
 # delegate
 Multicast delegate for TypeScript and JavaScript.
 
-[![npm](https://img.shields.io/npm/dw/localeval.svg)](https://www.npmjs.com/package/@steelbreeze/delegate)
+  [![NPM Version][npm-image]][npm-url]
+  [![NPM Downloads][downloads-image]][downloads-url]
 
 If you like delegate, please star it...
 
@@ -69,3 +70,8 @@ isCallable(delegate: Delegate): boolean
 
 ## License
 MIT
+
+[npm-image]: https://img.shields.io/npm/v/delegate.svg
+[npm-url]: https://npmjs.org/package/delegate
+[downloads-image]: https://img.shields.io/npm/dm/delegate.svg
+[downloads-url]: https://npmjs.org/package/delegate
