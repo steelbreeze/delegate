@@ -71,7 +71,7 @@ isCallable(delegate: Delegate): boolean
 ## License
 MIT
 
-[npm-image]: https://img.shields.io/npm/v/delegate.svg
-[npm-url]: https://npmjs.org/package/delegate
-[downloads-image]: https://img.shields.io/npm/dm/delegate.svg
-[downloads-url]: https://npmjs.org/package/delegate
+[npm-image]: https://img.shields.io/npm/v/@steelbreeze/delegate.svg
+[npm-url]: https://npmjs.org/package/@steelbreeze/delegate
+[downloads-image]: https://img.shields.io/npm/dm/@steelbreeze/delegate.svg
+[downloads-url]: https://npmjs.org/package/@steelbreeze/delegate
