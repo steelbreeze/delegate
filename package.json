@@ -1,11 +1,12 @@
 {
   "name": "@steelbreeze/delegate",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Multicast delegate for TypeScript and JavaScript",
-  "main": "delegate.js",
-  "typings": "delegate.d.ts",
+  "main": "./lib/delegate.js",
+  "typings": "./lib/delegate.d.ts",
   "directories": {
     "example": "examples",
+    "lib": "lib",
     "test": "test"
   },
   "scripts": {
@@ -18,8 +19,8 @@
   "keywords": [
     "multicast",
     "delegate",
-	"TypeScript",
-	"JavaScript"
+    "TypeScript",
+    "JavaScript"
   ],
   "author": "David Mesquita-Morris",
   "license": "MIT",

@@ -69,7 +69,9 @@ isCallable(delegate: Delegate): boolean
 ```
 
 ## License
-MIT
+MIT License
+
+Copyright (c) 2017 David Mesquita-Morris
 
 [npm-image]: https://img.shields.io/npm/v/@steelbreeze/delegate.svg
 [npm-url]:       https://www.npmjs.com/package/@steelbreeze/delegate
