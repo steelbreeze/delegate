@@ -7,7 +7,7 @@ If you like delegate, please star it...
 
 ## Install
 ```shell
-npm install @steelbreeze/delegate
+npm i @steelbreeze/delegate
 ```
 
 ## Usage
