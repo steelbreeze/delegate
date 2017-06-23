@@ -49,19 +49,21 @@ c World
 c Hello world
 ```
 ## API
-### Delegate
+### Interfaces
+#### Delegate
 A prototype for a delegate function that is callable.
 
 ```typescript
 (...args: any[]): any
 ```
-### create
+### Functions
+#### create
 Creates a new delegate from one or more functions or delegates, the result of which is callable and when called returns an array of all the return values from those functions or delegates.
 
 ```typescript
 create(...delegates: Delegate[]): Delegate
 ```
-### isCallable
+#### isCallable
 Tests a delegate to see if it is callable. A callable delegate is one that is not null or undefined.
 
 ```typescript
