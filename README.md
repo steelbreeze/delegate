@@ -51,17 +51,24 @@ c Hello world
 ## API
 ### Interfaces
 #### Delegate
-A prototype for a delegate function that is callable.
+A prototype for a delegate function that is callable and may return a value.
 
 ```typescript
 (...args: any[]): any
 ```
+#### MulticastDelegate
+A prototype for a multicast delegate function that calls multiple delegates and returns all their return values as an array.
+
+```typescript
+(...args: any[]): any[]
+```
+>**Note:** A MulticastDelegate is substitutable for a Delegate.
 ### Functions
 #### create
 Creates a new delegate from one or more functions or delegates, the result of which is callable and when called returns an array of all the return values from those functions or delegates.
 
 ```typescript
-create(...delegates: Delegate[]): Delegate
+create(...delegates: Delegate[]): MulticastDelegate
 ```
 #### isCallable
 Tests a delegate to see if it is callable. A callable delegate is one that is not null or undefined.

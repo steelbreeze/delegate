@@ -9,21 +9,33 @@
  */
 
 /***
- * A function that does nothing and returns nothing; this is returned from the [[create]] function if no [callable]{@link isCallable} delegates are passed in.
+ * A function that does nothing; this is returned from the [[create]] function if no [callable]{@link isCallable} [delegates]{@link Delegate} are passed in.
  * @hidden
  */
-const noop = (): void => { };
+const noop = () => { return [] };
 
 /**
- * Implementation of a multicast delegate to be used in conjunction with the [[create]] function.
+ * The prototype for any callable function; one that takes an arbitory number of parameters and may return a value.
  */
 export interface Delegate {
 	/**
-	 * The a prototype for any callable function.
-	 * @param args An arbitory number of parameters to pass to the function.
-	 * @return An optional return from the function. If the delegate is a multicast delegate (one created from multiple other delegates) this will be in the form of an array.
+	 * @param args An arbitory number of parameters to pass to the [delegate]{@link Delegate}.
+	 * @return An optional return from the [delegate]{@link Delegate}.
 	 */
 	(...args: any[]): any;
+}
+
+/**
+ * Implementation of a [multicast delegate]{@link MulticastDelegate} as returned by the [[create]] function.
+ * A [multicast delegate]{@link MulticastDelegate} encaptulates an arbitory number of [delegates]{@link Delegate} and returns an array of all their return values when called.
+ * A [multicast delegate]{@link MulticastDelegate} is substitutable for a [delegates]{@link Delegate}.
+ */
+export interface MulticastDelegate {
+	/**
+	 * @param args An arbitory number of parameters to pass to the [multicast delegate]{@link MulticastDelegate}.
+	 * @return An array of return values from the [multicast delegate]{@link MulticastDelegate}.
+	 */
+	(...args: any[]): any[];
 }
 
 /**
@@ -44,11 +56,11 @@ function hasBehavior(delegate: Delegate): boolean {
 }
 
 /**
- * Creates a [delegate]{@link Delegate} for one or more [delegates]{@link Delegate} (functions) that can be called as one.
+ * Creates a [multicast delegate]{@link Delegate} for one or more [delegates]{@link Delegate} (functions) that can be called as one.
  * @param delegates The set of [delegates]{@link Delegate} (functions) to aggregate into a single [delegate]{@link Delegate}.
  * @return Returns a [delegate]{@link Delegate} that when called calls the other [delegates]{@link Delegate} provided.
  */
-export function create(...delegates: Delegate[]): Delegate {
+export function create(...delegates: Delegate[]): MulticastDelegate {
 	// filter non-callable entries from the passed parameters.
 	const callable = delegates.filter(hasBehavior);
 
