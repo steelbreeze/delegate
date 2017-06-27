@@ -3,9 +3,7 @@
  * 
  * Multicast delegate for TypeScript
  * 
- * @copyright (c) 2017 David Mesquita-Morris
- * 
- * Licensed under the MIT and GPL v3 licences
+ * Copyright (c) 2017 David Mesquita-Morris
  */
 
 /***
