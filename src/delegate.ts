@@ -59,9 +59,7 @@ function hasBehavior(delegate: Delegate): boolean {
  * @return Returns a [delegate]{@link Delegate} that when called calls the other [delegates]{@link Delegate} provided.
  */
 export function create(...delegates: Delegate[]): MulticastDelegate {
-	// filter the delegates passed to those that have callable behavior
 	const callable = delegates.filter(hasBehavior);
 
-	// return a new delegate that calls the ones passed; or the noop delegate if none are callable
 	return callable.length !== 0 ? (...args: any[]) => callable.map(f => f(...args)) : noop;
 }
