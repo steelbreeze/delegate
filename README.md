@@ -26,7 +26,6 @@ b("b")
 c("c");
 ```
 
-> **Note:** from v1.0.8 onwards the value of ```c``` above will be typed ```string[][]```.
 ### JavaScript
 ```javascript
 var delegate = require("@steelbreeze/delegate");
