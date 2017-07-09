@@ -67,7 +67,6 @@ interface MulticastDelegate<TReturn = any> {
 	(...args: any[]): TReturn[]
 }
 ```
->**Note:** A MulticastDelegate is substitutable for a Delegate.
 ### Functions
 #### create
 Creates a new delegate from one or more functions or delegates, the result of which is callable and when called returns an array of all the return values from those functions or delegates.
