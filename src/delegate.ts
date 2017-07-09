@@ -7,20 +7,20 @@
  */
 
 /***
- * A function that does nothing; this is returned from the [[create]] function if no [callable]{@link isCallable} [delegates]{@link Delegate} are passed in.
+ * A [[MulticastDelegate]] does nothing; this is returned from the [[create]] function if no [callable]{@link isCallable} [delegates]{@link Delegate} are passed in.
  * @hidden
  */
-const noop = () => { return [] };
+const noop: MulticastDelegate = () => { return [] };
 
 /**
  * The prototype for any callable function; one that takes an arbitory number of parameters and may return a value.
  */
-export interface Delegate {
+export interface Delegate<TReturn = any> {
 	/**
 	 * @param args An arbitory number of parameters to pass to the [delegate]{@link Delegate}.
 	 * @return An optional return from the [delegate]{@link Delegate}.
 	 */
-	(...args: any[]): any;
+	(...args: any[]): TReturn;
 }
 
 /**
@@ -28,21 +28,12 @@ export interface Delegate {
  * A [multicast delegate]{@link MulticastDelegate} encaptulates an arbitory number of [delegates]{@link Delegate} and returns an array of all their return values when called.
  * A [multicast delegate]{@link MulticastDelegate} is substitutable for a [delegates]{@link Delegate}.
  */
-export interface MulticastDelegate {
+export interface MulticastDelegate<TReturn = any> {
 	/**
 	 * @param args An arbitory number of parameters to pass to the [multicast delegate]{@link MulticastDelegate}.
 	 * @return An array of return values from the [multicast delegate]{@link MulticastDelegate}.
 	 */
-	(...args: any[]): any[];
-}
-
-/**
- * Tests a [delegate]{@link Delegate} to see if is contains callable behavior. 
- * @param delegate The [delegate]{@link Delegate} to test.
- * @return Returns true if the [delegate]{@link Delegate} contains callable behavior.
- */
-export function isCallable(delegate: Delegate): boolean {
-	return delegate !== undefined && delegate !== null;
+	(...args: any[]): TReturn[];
 }
 
 /**
@@ -50,7 +41,7 @@ export function isCallable(delegate: Delegate): boolean {
  * @hidden
  */
 function hasBehavior(delegate: Delegate): boolean {
-	return delegate !== noop && isCallable(delegate);
+	return delegate !== noop && delegate !== undefined && delegate !== null;
 }
 
 /**
@@ -58,7 +49,7 @@ function hasBehavior(delegate: Delegate): boolean {
  * @param delegates The set of [delegates]{@link Delegate} (functions) to aggregate into a single [delegate]{@link Delegate}.
  * @return Returns a [delegate]{@link Delegate} that when called calls the other [delegates]{@link Delegate} provided.
  */
-export function create(...delegates: Delegate[]): MulticastDelegate {
+export function create<TReturn = any>(...delegates: Delegate<TReturn>[]): MulticastDelegate<TReturn> {
 	const callable = delegates.filter(hasBehavior);
 
 	return callable.length !== 0 ? (...args: any[]) => callable.map(f => f(...args)) : noop;
