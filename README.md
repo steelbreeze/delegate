@@ -64,7 +64,7 @@ A prototype for a multicast delegate function that calls multiple delegates and 
 
 ```typescript
 interface MulticastDelegate<TReturn = any> {
-	(...args: any[]): any[]
+	(...args: any[]): TReturn[]
 }
 ```
 >**Note:** A MulticastDelegate is substitutable for a Delegate.
