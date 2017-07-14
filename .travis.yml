@@ -1,7 +1,14 @@
-{
-  "language": "node_js",
-  "node_js": "5",
-  "group": "stable",
-  "dist": "precise",
-  "os": "linux"
-}
+language: node_js
+node_js:
+  - "node"
+  - "iojs"
+env:
+  - CXX=g++-4.8
+addons:
+  code_climate:
+    repo_token: 73fd71699476b04402e6a4141900ce2ed4ebd74d22ef31f04c9edf17afaca668
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
