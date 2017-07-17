@@ -6,12 +6,6 @@
  * Copyright (c) 2017 David Mesquita-Morris
  */
 
-/***
- * A [[MulticastDelegate]] does nothing; this is returned from the [[create]] function if no [callable]{@link isCallable} [delegates]{@link Delegate} are passed in.
- * @hidden
- */
-const noop: MulticastDelegate = () => { return [] };
-
 /**
  * The prototype for any callable function; one that takes an arbitory number of parameters and may return a value.
  */
@@ -35,6 +29,12 @@ export interface MulticastDelegate<TReturn = any> {
 	 */
 	(...args: any[]): TReturn[];
 }
+
+/***
+ * A [[MulticastDelegate]] does nothing; this is returned from the [[create]] function if no [callable]{@link isCallable} [delegates]{@link Delegate} are passed in.
+ * @hidden
+ */
+const noop: MulticastDelegate = () => { return [] };
 
 /**
  * Tests a [delegate]{@link Delegate} to see if it contains behavior. 

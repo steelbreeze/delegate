@@ -1,4 +1,11 @@
 /**
+ * @module delegate
+ *
+ * Multicast delegate for TypeScript
+ *
+ * Copyright (c) 2017 David Mesquita-Morris
+ */
+/**
  * The prototype for any callable function; one that takes an arbitory number of parameters and may return a value.
  */
 export interface Delegate<TReturn = any> {
