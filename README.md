@@ -3,6 +3,7 @@ Multicast delegate for TypeScript and JavaScript.
 
   [![NPM Version][npm-image]][npm-url]
   [![NPM Downloads][downloads-image]][npm-url]
+  [![Build Status](https://travis-ci.org/steelbreeze/delegate.svg?branch=master)](https://travis-ci.org/steelbreeze/delegate)
   [![Code Climate](https://codeclimate.com/github/steelbreeze/delegate/badges/gpa.svg)](https://codeclimate.com/github/steelbreeze/delegate)
   [![Test Coverage](https://codeclimate.com/github/steelbreeze/delegate/badges/coverage.svg)](https://codeclimate.com/github/steelbreeze/delegate/coverage)
 
