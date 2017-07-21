@@ -10,6 +10,9 @@ engines:
       - php
   eslint:
     enabled: true
+    checks:
+      no-void:
+        enabled: false
   fixme:
     enabled: true
 ratings:
