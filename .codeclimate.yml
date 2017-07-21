@@ -1,9 +1,0 @@
-engines:
-  # ... CONFIG CONTENT ...
-  eslint:
-    enabled: true
-    # ... CONFIG CONTENT ...
-    checks:
-      no-void:
-        enabled: false
-# ... CONFIG CONTENT ...
