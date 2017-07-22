@@ -10,7 +10,7 @@
 		"test": "test"
 	},
 	"scripts": {
-		"test": "mocha"
+		"test": "nyc mocha"
 	},
 	"dependencies": {
 		"mocha": "3.4.2"
