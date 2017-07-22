@@ -12,7 +12,8 @@
 	"scripts": {
 		"test": "nyc mocha"
 	},
-	"dependencies": {
+	"devDependencies": {
+		"nyc": "11.0.3",
 		"mocha": "3.4.2"
 	},
 	"repository": {
