@@ -10,10 +10,12 @@
 		"test": "test"
 	},
 	"scripts": {
+		"build": "tsc -p .",
 		"test": "nyc --reporter=lcov mocha",
 		"coverage": "CODECLIMATE_REPO_TOKEN=bc876c0ea1d6eb85252962c58fd26ce8d478fdf6ef2c48f41d29aef608583dfb codeclimate-test-reporter < ./coverage/lcov.info"
 	},
 	"devDependencies": {
+		"typescript": "latest",
 		"nyc": "latest",
 		"mocha": "latest",
 		"codeclimate-test-reporter": "latest"
