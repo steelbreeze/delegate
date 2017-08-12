@@ -2,7 +2,8 @@ language:
   - node_js
 
 node_js:
-  - "stable"
+  - "node"
+  - "iojs"
 
 install:
   - npm install
