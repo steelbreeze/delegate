@@ -1,7 +1,6 @@
 language:
-  - node
-  - iojs
-  - lts/*
+  - node_js
+  - 
 
 node_js:
   - "stable"
