@@ -24,5 +24,7 @@ ratings:
   - "**.php"
   - "**.py"
   - "**.rb"
+  - "**.ts"
 exclude_paths:
 - test/
+- lib/
