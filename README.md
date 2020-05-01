@@ -82,7 +82,7 @@ create<TReturn = any>(...delegates: Delegate<TReturn>[]): MulticastDelegate<TRet
 ## License
 MIT License
 
-Copyright (c) 2017-9 David Mesquita-Morris
+Copyright (c) 2017-20 David Mesquita-Morris
 
 [npm-image]: https://img.shields.io/npm/v/@steelbreeze/delegate.svg
 [npm-url]:       https://www.npmjs.com/package/@steelbreeze/delegate
